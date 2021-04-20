@@ -1,16 +1,21 @@
 from django.shortcuts import render, HttpResponse
-
+from .models import image
 # Create your views here.
 
 def home(request):
-    return render(request, "home/index.html")
-    #return HttpResponse("<h1><img src='https://source.unsplash.com/1600x450/?nature,water'><br><p style='text-align:center;'>This is Home<h1>")
+    images = image.objects.all()
+    context = {'images': images}
+    return render(request, "home/index.html", context)
+
 
 def about(request):
-    return HttpResponse("This is about us")
+    return render(request, "home/about.html")
+
 
 def contact(request):
-    return HttpResponse("This is contact")
+    return render(request, "home/contact.html")
+
 
 def gallery(request):
-    return HttpResponse("This is gallery")
+    return render(request, "home/gallery.html")
+
