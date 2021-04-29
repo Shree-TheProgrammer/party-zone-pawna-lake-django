@@ -41,16 +41,16 @@
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon" aria-hidden="false"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
 <div class="container my-2">
-  <h1 class="text-center bg-success text-dark" >WELCOME TO PARTY ZONE PAWNA LAKE CAMPING</h1>
+  <h1 class="text-center bg-warning text-dark fst-italic" >WELCOME TO PARTY ZONE PAWNA LAKE CAMPING</h1>
   <p>
     <b>Party Zone</b> is the best Campaign which provide you all the Quality Services with Security. Pawna Lake is well known  place where people feel like as they are enjoying in Goa but Pawna lake has it own beauty which make it more glorious than other place. It has such cool environment, Nature Beauty, Wild Climate, Tracking and Much more .
   Must visit to see the Unique Beauty of Pawna Lake.
@@ -102,18 +102,15 @@
   </div>
 </div>
 </div>
-<div class="container mt-3">
+<div class="container-sm mt-3">
 <h2 class="text-center my-3"><strong>|| GALLERY ||</strong></h2>
 
 <div class="row mb-2 m-3">
     {% for img in images %}
-  <div class="col-md-3 border border-light">
-    <img src='/media/{{img.image}}' width="300" height="200"><br>
+  <div class="col-md-4 mx-0 my-2 border border-white">
+    <img src='/media/{{img.image}}' width="400" height="400"><br>
   </div>
     {% endfor %}
 </div>
-
 </div>
-
-
 {% endblock %}
