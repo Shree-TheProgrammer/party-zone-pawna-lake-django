@@ -30,4 +30,14 @@ class gal(models.Model):
     def __str__(self):
         return self.iname
 
+class keyfeatimg(models.Model):
+    sno = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=100)
+    desc = models.CharField(max_length=100)
+    kimg = models.ImageField(upload_to="home/images", default="")
+
+    def __str__(self):
+        return self.title
+
+
 

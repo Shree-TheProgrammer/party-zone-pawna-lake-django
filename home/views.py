@@ -1,10 +1,10 @@
 from django.shortcuts import render, HttpResponse
-from .models import image, Contact, gal
+from .models import image, Contact, gal, keyfeatimg
 
 # Create your views here.
 
 def home(request):
-    images = image.objects.all()
+    images = keyfeatimg.objects.all()
     context = {'images': images}
     return render(request, "home/index.html", context)
 
@@ -31,4 +31,6 @@ def gallery(request):
     gimages = gal.objects.all()
     gal_img = {'gimages': gimages}
     return render(request, "home/gallery.html", gal_img)
+
+
 

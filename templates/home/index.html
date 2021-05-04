@@ -48,15 +48,20 @@
     <span class="carousel-control-next-icon" aria-hidden="false"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div><br><br><br><br><br><br>
+
+
 <div class="container my-2">
-  <h1 class="text-center bg-warning text-dark fst-italic" >WELCOME TO PARTY ZONE PAWNA LAKE CAMPING</h1>
-  <p>
+  <h1 class="text-info fst-italic border border-dark text-center bg-dark">WELCOME TO PARTY ZONE PAWNA LAKE CAMPING</h1><br><br><br><br>
+
+    <p class="text-center border border-4">
     <b>Party Zone</b> is the best Campaign which provide you all the Quality Services with Security. Pawna Lake is well known  place where people feel like as they are enjoying in Goa but Pawna lake has it own beauty which make it more glorious than other place. It has such cool environment, Nature Beauty, Wild Climate, Tracking and Much more .
   Must visit to see the Unique Beauty of Pawna Lake.
   </p>
-  <b><hr></b>
-  <h3 class="text-center bg-dark text-light">PACKAGES (Day and Night)</h3>
+  <br><br><br><br><br><br>
+
+
+  <h1 class="text-center text-info bg-dark fst-italic">PACKAGES</h1>
   <div class="accordion" id="accordionExample" my-2>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -102,15 +107,23 @@
   </div>
 </div>
 </div>
-<div class="container-sm mt-3">
-<h2 class="text-center my-3"><strong>|| GALLERY ||</strong></h2>
+<br><br><br>
 
-<div class="row mb-2 m-3">
-    {% for img in images %}
-  <div class="col-md-4 mx-0 my-2 border border-white">
-    <img src='/media/{{img.image}}' width="400" height="400"><br>
+
+<div class="container mt-3 mb-3">
+<h1 class="text-center fw-bolder fst-italic bg-dark text-info">Key Features of Campsite</h1>
+{% for i in images %}
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <img src='/media/{{i.kimg}}' class="card-img-top" alt="...">
+      <div class="card-body">
+        <h1 class="card-title text-center">{{i.title}}</h1>
+        <h3><p class="card-text text-center">{{i.desc}}</p></h3>
+      </div>
+    </div>
   </div>
-    {% endfor %}
 </div>
 </div>
+{% endfor %}
 {% endblock %}

@@ -3,68 +3,14 @@
 {% block title  %}Gallery|PARTY ZONE PAWNA LAKE CAMPING{% endblock %}
 
 {% block body %}
-<!-- <div class="container mt-3 mb-3">
+<div class="container mt-3 mb-3 border">
     <div class="row">
         {% for img in gimages %}
-        <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6 my-2">
-            <img src='/media/{{img.gimg}}' width="650" height="400">
+        <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6 my-2 text-center rounded mx-auto d-block">
+            <img src='/media/{{img.gimg}}' width="600" height="400">
         </div>
         {% endfor %}
     </div>
-</div> -->
-<div class="lightbox">
-  <div class="multi-carousel">
-    <div class="multi-carousel-inner">
-      <div class="multi-carousel-item">
-        <img
-          src="https://mdbootstrap.com/img/Photos/Thumbnails/Slides/1.jpg"
-          data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
-          alt="Gallery image 1"
-          class="w-100"
-        />
-      </div>
-      <div class="multi-carousel-item">
-        <img
-          src="https://mdbootstrap.com/img/Photos/Thumbnails/Slides/2.jpg"
-          data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/2.jpg"
-          alt="Gallery image 2"
-          class="w-100"
-        />
-      </div>
-      <div class="multi-carousel-item">
-        <img
-          src="https://mdbootstrap.com/img/Photos/Thumbnails/Slides/3.jpg"
-          data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/3.jpg"
-          alt="Gallery image 3"
-          class="w-100"
-        />
-      </div>
-      <div class="multi-carousel-item">
-        <img
-          src="https://mdbootstrap.com/img/Photos/Thumbnails/Slides/4.jpg"
-          data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/4.jpg"
-          alt="Gallery image 4"
-          class="w-100"
-        />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      tabindex="0"
-      data-mdb-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      tabindex="0"
-      data-mdb-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
 </div>
 
 {% endblock %}
