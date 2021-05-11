@@ -32,5 +32,7 @@ def gallery(request):
     gal_img = {'gimages': gimages}
     return render(request, "home/gallery.html", gal_img)
 
+def faq(request):
+    return render(request, 'home/faq.html')
 
 
