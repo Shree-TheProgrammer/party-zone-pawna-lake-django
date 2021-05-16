@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block body %}
+<div class="container mt-3 mb-3">
+<h1 class="text-center fst-italic bg-dark text-info">LATEST BLOG</h1>
+{% for post in allposts %}
+<div class="container mt-3 mb-3">
+    <div class="col-md-12">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom"></h3>
+      <article class="blog-post">
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">{{post.timestamp}} by <a href="#">{{pst.author}}</a></p>
+        <hr>
+        <p>{{post.desc}}</p>
+      </article>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

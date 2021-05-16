@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
-from .models import image, Contact, gal, keyfeatimg
+from django.shortcuts import render, HttpResponse, redirect
+from .models import image, Contact, gal, keyfeatimg, Post
+from django.contrib import messages
 
 # Create your views here.
 
@@ -22,8 +23,12 @@ def contact(request):
         city = request.POST['city']
         content = request.POST['content']
 
-        user = Contact(firstname=firstname, lastname=lastname, email=email, phone=phone, city=city, content=content)
-        user.save()
+        if firstname == '' or lastname == '' or email == '' or phone == '':
+            messages.ERROR(request, "Fill your details correctly")
+        else:
+            user = Contact(firstname=firstname, lastname=lastname, email=email, phone=phone, city=city, content=content)
+            user.save()
+            messages.success(request, "Thank you for contacting us.. we will get you back shortly!!!")
     return render(request, "home/contact.html")
 
 
@@ -35,4 +40,19 @@ def gallery(request):
 def faq(request):
     return render(request, 'home/faq.html')
 
+def refund(request):
+    return render(request, 'home/refund.html')
+
+def termsandcond(request):
+    return render(request, 'home/termsandcond.html')
+
+def blog(request):
+    allposts = Post.objects.all()
+    context = {'allposts': allposts}
+    return render(request, 'home/blog.html', context)
+
+def blogPost(request, slug):
+    post = Post.objects.filter(slug=slug).first()
+    context = {'post': post}
+    return render(request, 'home/blogPost.html', context)
 

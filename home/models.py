@@ -39,5 +39,18 @@ class keyfeatimg(models.Model):
     def __str__(self):
         return self.title
 
+class Post(models.Model):
+    sno = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=500)
+    desc = models.TextField(max_length=5000)
+    slug = models.CharField(max_length=500)
+    author = models.CharField(max_length=100)
+    img = models.ImageField(upload_to="home/images", default="")
+    timestamp = models.DateTimeField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
 
 
